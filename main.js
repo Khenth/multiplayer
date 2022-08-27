@@ -131,6 +131,8 @@ io.on("connection", (socket) => {
 });
 
 app.use(express.static('public'));
+app.use(express.json());
+app.use('/api', require('./routes/multi'));
 server.listen(port, () => {
   console.log(`listening on *:${port}`);
 });
