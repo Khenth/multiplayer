@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 
-const uri = "mongodb://localhost/skycap";
+const uri = "mongodb://127.0.0.1:27017/skycap";
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
