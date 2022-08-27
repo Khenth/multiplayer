@@ -9,11 +9,7 @@ const io = new Server(server);
 const port = process.env.PORT;
 //redis
 const redis = require("redis");
-const redisClient = redis.createClient({
-  port:6379,
-  host:"10.124.0.2"
-  
-});
+const redisClient = redis.createClient();
 const { promisify } = require("es6-promisify");
 const asyncGet = promisify(redisClient.HGET).bind(redisClient);
 
